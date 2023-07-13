@@ -22,6 +22,28 @@ function updateTime() {
       "h:mm:ss [<small>]A[</small>]"
     );
   }
+  let meridaElement = document.querySelector("#merida");
+  if (meridaElement) {
+    let meridaDateElement = merida.querySelector(".date");
+    let meridaTimeElement = merida.querySelector(".time");
+    let meridaTime = moment().tz("America/Merida");
+
+    meridaDateElement.innerHTML = meridaTime.format("MMMM	Do YYYY");
+    meridaTimeElement.innerHTML = meridaTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
+  let newyorkElement = document.querySelector("#newyork");
+  if (newyorkElement) {
+    let newyorkDateElement = newyorkElement.querySelector(".date");
+    let newyorkTimeElement = newyorkElement.querySelector(".time");
+    let newyorkTime = moment().tz("America/New_York");
+
+    newyorkDateElement.innerHTML = newyorkTime.format("MMMM	Do YYYY");
+    newyorkTimeElement.innerHTML = newyorkTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
 }
 
 function updateCity(event) {
