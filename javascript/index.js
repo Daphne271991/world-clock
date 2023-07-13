@@ -1,5 +1,4 @@
 function updateTime() {
-  // Los Angeles
   let losAngelesElement = document.querySelector("#los-angeles");
   if (losAngelesElement) {
     let losAngelesDateElement = losAngelesElement.querySelector(".date");
@@ -12,15 +11,14 @@ function updateTime() {
     );
   }
 
-  // Paris
-  let parisElement = document.querySelector("#paris");
-  if (parisElement) {
-    let parisDateElement = parisElement.querySelector(".date");
-    let parisTimeElement = parisElement.querySelector(".time");
-    let parisTime = moment().tz("Europe/Paris");
+  let italyElement = document.querySelector("#italy");
+  if (italyElement) {
+    let italyDateElement = italyElement.querySelector(".date");
+    let italyTimeElement = italyElement.querySelector(".time");
+    let italyTime = moment().tz("Europe/Prague");
 
-    parisDateElement.innerHTML = parisTime.format("MMMM	Do YYYY");
-    parisTimeElement.innerHTML = parisTime.format(
+    italyDateElement.innerHTML = italyTime.format("MMMM	Do YYYY");
+    italyTimeElement.innerHTML = italyTime.format(
       "h:mm:ss [<small>]A[</small>]"
     );
   }
